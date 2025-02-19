@@ -17,7 +17,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t virtuscorp_tst .
+          docker build -t virtuscorp_tst ./virtuscorp_tst
           docker tag virtuscorp_tst ${{ secrets.DOCKER_USERNAME }}/virtuscorp_tst:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/virtuscorp_tst:latest
 
